@@ -1,0 +1,22 @@
+{
+  "name": "solid-winner-homework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test:all": "playwright test",
+    "test:all:headed": "playwright test --headed",
+    "test:inline": "playwright test --workers 1",
+    "test:inline:headed": "playwright test --workers 1 --headed",
+    "test:single:headed": "playwright test --headed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.28.1",
+  "devDependencies": {
+    "@playwright/test": "^1.60.0",
+    "@types/node": "^25.9.1",
+    "dotenv": "17.3.1"
+  }
+}
