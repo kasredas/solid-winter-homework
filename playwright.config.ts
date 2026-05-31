@@ -7,6 +7,8 @@ dotenv.config({ path: path.resolve(__dirname, '.env') });
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
+  globalTimeout: 120_000,
+  timeout: 60_000,
   testDir: './tests',
   /* Run tests in files in parallel */
   fullyParallel: true,
@@ -25,7 +27,10 @@ export default defineConfig({
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
-    actionTimeout: 30000,
+    actionTimeout: 30_000,
+  },
+  expect: {
+    timeout: 15_000,
   },
 
   /* Configure projects for major browsers */

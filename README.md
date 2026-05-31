@@ -42,6 +42,3 @@ BASE_URL="<http://wwww.your_url>"
 
 <hr>
 
-#### Other notes
-Most default configs was suitable for homework tasks, however in fully functioning testing project - would need to tweak default timeouts.
-

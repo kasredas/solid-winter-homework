@@ -22,7 +22,7 @@ export const test = base.extend<PageFixtures>({
 
   agreementsDialog: async ({ page }, use) => {
     const locators = new AgreementsDialogLocators(page);
-    await use(new AgreementsDialog(locators));
+    await use(new AgreementsDialog(page, locators));
   },
 
   homePage: async ({ page }, use) => {

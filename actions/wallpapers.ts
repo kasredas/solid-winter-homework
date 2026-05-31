@@ -1,13 +1,14 @@
 import { Locator, expect, Page } from '@playwright/test';
 import * as fs from 'fs';
 import * as path from 'path';
+import { logger } from '../utils/logger';
 
 export async function printWallpaperTypes(wallpaperBlocks: Locator, premiumWallpaperLocator: Locator): Promise<void> {
   for (let i = 0; i < await wallpaperBlocks.count(); i++) {
     const block = wallpaperBlocks.nth(i);
     const isPremium = await block.locator(premiumWallpaperLocator).count() > 0;
     const type = isPremium ? 'Premium' : 'Free';
-    console.log(`Wallpaper ${i + 1} type: ${type}`);
+    logger.actionInfo(`Wallpaper ${i + 1} type: ${type}`);
     await block.waitFor({ state: 'visible' });
     await block.hover();
   }
@@ -39,6 +40,7 @@ export async function downloadAndGetFileName(downloadButton: Locator): Promise<s
 
 export async function verifyWallpaperDownloaded(fileName: string) {
   const savePath = path.join('./downloads', fileName);
+  logger.actionInfo(`Verifying download: ${fileName}`);
   expect(fs.existsSync(savePath)).toBe(true);
   expect(fs.statSync(savePath).size).toBeGreaterThan(0);
 }
