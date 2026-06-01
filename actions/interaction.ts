@@ -5,7 +5,6 @@ export async function waitForVisibilityAndClick(page: Page,locator: Locator) {
   await expect(locator).toBeVisible();
   await expect(locator).toBeEnabled();
   await locator.hover();
-  // await locator.click();
   await Promise.all([
     page.waitForLoadState('networkidle'),
     locator.click(),
