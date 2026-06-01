@@ -8,6 +8,8 @@ BASE_URL="<http://wwww.your_url>"
 
 3. run `pnpm i`
 
+4. run `pnpm exec playwright install`
+
 ## Running tests
 
 #### Run all tests in parallel
@@ -47,4 +49,3 @@ BASE_URL="<http://wwww.your_url>"
 ```
 
 <hr>
-
