@@ -1,8 +1,7 @@
 # Homework in playwright
 
 ## Pre-requisite
-1. Open `.env` file ir project root and set value for BASE_URL
-BASE_URL="<http://wwww.your_url>"
+1. Open `.env` file ir project root and set value for BASE_URL (example: `BASE_URL="<http://wwww.your_url>`)
 
 2. Install pnpm
 
