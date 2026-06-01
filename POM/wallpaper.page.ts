@@ -8,7 +8,7 @@ export class WallpaperPage {
     private readonly loc: WallpaperPageLocators,
   ) {}
 
-  async downloadWallpaper() {
+  async downloadAndVerifyWallpaper() {
     const downloadFileName = await downloadAndGetFileName(this.loc.downloadButton);
     await verifyWallpaperDownloaded(downloadFileName);
   }
