@@ -16,6 +16,12 @@ BASE_URL="<http://wwww.your_url>"
  pnpm test:all
 ```
 
+#### Run `wallpaper` test suite
+```
+ pnpm test:suite:wallpaper
+```
+
+
 #### Run all tests in headed mode
 
 ```

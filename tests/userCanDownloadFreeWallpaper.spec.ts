@@ -2,7 +2,9 @@ import { navigateToHomePage } from '../actions/navigation';
 import { test } from '../fixtures/pages.fixture';
 
 test.describe('Wallpaper Suite', () => {
-  test('User can download free wallpaper', async ({ page, agreementsDialog, homePage, browseNowPage, headerBlock, wallpaperPage }) => {
+  test('User can download free wallpaper', {
+    tag: '@wallpaper'
+  }, async ({ page, agreementsDialog, homePage, browseNowPage, headerBlock, wallpaperPage }) => {
     const searchKeyword = 'Hello';
 
     await test.step('Open page ', async () => {

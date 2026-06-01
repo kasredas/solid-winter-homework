@@ -2,7 +2,9 @@ import { navigateToHomePage } from '../actions/navigation';
 import { test } from '../fixtures/pages.fixture';
 
 test.describe('Wallpaper Suite', () => {
-  test('User can identify free vs premium wallpapers', async ({ page, agreementsDialog, homePage, browseNowPage, headerBlock }) => {
+  test('User can identify free vs premium wallpapers', {
+    tag: '@wallpaper'
+  }, async ({ page, agreementsDialog, homePage, browseNowPage, headerBlock }) => {
     const searchKeyword = 'Abstract';
 
     await test.step('Open page ', async () => {

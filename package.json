@@ -8,7 +8,7 @@
     "test:all:headed": "playwright test --headed",
     "test:inline": "playwright test --workers 1",
     "test:inline:headed": "playwright test --workers 1 --headed",
-    "test:single:headed": "playwright test --headed"
+    "test:suite:wallpaper": "playwright test --grep @wallpaper"
   },
   "keywords": [],
   "author": "",
