@@ -27,8 +27,8 @@ test.describe('Wallpaper Suite', () => {
       await browseNowPage.openFirstFreeWallpaper();
     });
 
-    await test.step('Download free wallpaper', async () => {
-      await wallpaperPage.downloadWallpaper();
+    await test.step('Download free wallpaper and verify file', async () => {
+      await wallpaperPage.downloadAndVerifyWallpaper();
     });
   });
 });
